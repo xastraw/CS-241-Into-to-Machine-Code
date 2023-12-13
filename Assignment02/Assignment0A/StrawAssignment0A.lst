@@ -1,0 +1,41 @@
+AARCH64 GAS  StrawAssignment0A.asm 			page 1
+
+
+   1              	//to compile:
+   2              	//as hello.asm -o hello.o
+   3              	//gcc hello.o -o hello
+   4              	//./hello
+   5              	.data
+   6 0000 58616E64 	mystring: .asciz "Xander\n"
+   6      65720A00 
+   7              	
+   8              	
+   9              	.text
+  10              	
+  11              	
+  12              	
+  13              	.global main
+  14              	main:
+  15 0000 FD7BBFA9 	    stp x29, x30, [sp, #-16]!
+  16              	
+  17              	
+  18 0004 A0000058 	    ldr x0, =mystring
+  19 0008 00000094 	    bl puts
+  20              	
+  21              	
+  22 000c FD7BC1A8 	    ldp x29, x30, [sp], #16
+  23 0010 00008052 	    mov w0, #0
+  24 0014 C0035FD6 	    ret
+  24      00000000 
+  24      00000000 
+AARCH64 GAS  StrawAssignment0A.asm 			page 2
+
+
+DEFINED SYMBOLS
+StrawAssignment0A.asm:6      .data:0000000000000000 mystring
+StrawAssignment0A.asm:14     .text:0000000000000000 main
+StrawAssignment0A.asm:15     .text:0000000000000000 $x
+StrawAssignment0A.asm:24     .text:0000000000000018 $d
+
+UNDEFINED SYMBOLS
+puts
